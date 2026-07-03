@@ -1,0 +1,10 @@
+SELECT
+    CUSTOMER_ID,
+    CUSTOMER_NAME,
+    CITY,
+    EMAIL,
+    ANNUAL_INCOME,
+    DBT_VALID_FROM,
+    DBT_VALID_TO
+FROM {{ ref('custom_snapshot') }}
+ORDER BY CUSTOMER_ID, DBT_VALID_FROM

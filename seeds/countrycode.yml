@@ -1,0 +1,44 @@
+version: 2
+ 
+seeds:
+  - name: COUNTRYDIALCODE2
+    description: "Country master containing country names and international dialing codes."
+ 
+    config:
+      column_types:
+        COUNTRY: varchar(30)
+        COUNTRY_CODE: number
+ 
+    columns:
+      - name: COUNTRY
+        description: "Country name."
+        tests:
+          - not_null
+          - unique
+ 
+      - name: COUNTRY_CODE
+        description: "International dialing code."
+        tests:
+          - not_null
+ 
+  - name: COUNTRYDIALCODE
+    description: "Second country dial code seed."
+ 
+    config:
+      column_types:
+        COUNTRY: varchar(30)
+        COUNTRY_CODE: number
+ 
+    columns:
+      - name: COUNTRY
+        description: "Country name."
+        tests:
+          - not_null
+          - unique
+ 
+      - name: COUNTRY_CODE
+        description: "International dialing code."
+        tests:
+          - not_null
+ 
+        

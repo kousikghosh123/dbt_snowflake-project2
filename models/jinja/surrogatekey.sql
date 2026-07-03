@@ -1,0 +1,12 @@
+SELECT
+
+{{ dbt_utils.generate_surrogate_key(
+
+['CUSTOMER_ID','PRODUCT_CATEGORY']
+
+)}} AS CUSTOMER_PRODUCT_KEY,
+
+*
+
+FROM SALES_TRANSACTIONS
+ 

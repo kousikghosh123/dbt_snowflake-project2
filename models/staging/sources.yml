@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: raw
+    database: dbt_demo
+    schema: raw
+
+    tables:
+      - name: customers
+      - name: orders
+
+  - name: dbt_sch
+    database: dbt_db
+    schema: dbt_sch
+
+    tables:
+      - name: SALES_TRANSACTIONS_2024
+      - name: SALES_TRANSACTIONS_2025
+
+  - name: scdraw
+    database: SCDTYPE_DB
+    schema: RAW
+
+    tables:
+      - name: CUST
+
+      - name: RAW_ORDERS
+
+    
+  - name: raw
+    database: BANKING_DB
+    schema: RAW
+
+    tables:
+      - name: CUSTOMER_MASTER

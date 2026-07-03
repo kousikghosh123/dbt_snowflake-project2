@@ -1,0 +1,6 @@
+SELECT
+    TRANSACTION_ID,
+    AMOUNT,
+    {{ calculate_tax('AMOUNT') }} AS TAX
+FROM SALES_TRANSACTIONS
+ 
